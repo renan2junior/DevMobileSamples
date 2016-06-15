@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="UsingPhoneApiApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UsingPhoneApiApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock FontSize="30"
+                       Text="Phone number" />
+            <TextBox x:Name="TxbPhoneNumber"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock FontSize="30"
+                       Text="Display name" />
+            <TextBox x:Name="TxbDisplayName"/>
+        </StackPanel>
+        <Button Grid.Row="2"
+                x:Name="BtnCallNumber"
+                HorizontalAlignment="Center"
+                Content="Call number"
+                Click="BtnCallNumber_OnClick"/>
+    </Grid>
+</Page>
