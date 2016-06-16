@@ -9,12 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="TxbLink" InputScope="Url"/>
+        <TextBlock FontSize="25"
+                   Text="Write a valid address to go" />
+        <TextBox x:Name="TxbLink"
+                 Grid.Row="1"
+                 InputScope="Url"
+                 Text="http://www.nabilsafatli.com" />
         <Button x:Name="BtnOpenUrl"
-                Grid.Row="1"
+                Grid.Row="2"
                 Content="Open url"
                 HorizontalAlignment="Center"
                 Tapped="BtnOpenUrl_OnTapped"/>
